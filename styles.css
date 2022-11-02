@@ -1,0 +1,419 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+:root {
+    --main-blue: rgb(20, 30, 40);
+    --main-black: #232523;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--main-black);
+    z-index: 5;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    background-color: var(--main-blue);
+    color: linen;
+}
+
+.ul-nav {
+    display: flex;
+    flex-wrap: wrap;
+    vertical-align: center;
+    list-style: none;
+}
+
+.ul-nav.left li {
+    margin: 0 2rem; 
+}
+
+.ul-nav.right li {
+    margin: 0 1rem;
+    height: 100%;
+}
+
+.ul-nav.right {
+    padding-right: 2rem;
+}
+
+.logo {
+    width: 2.1rem;
+    height: auto;
+    vertical-align: center;
+}
+
+.ul-nav li a {
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: 1.1rem;
+    height: 100%;
+    transition: 0.3s ease-in-out;
+}
+
+.ul-nav.left li a:hover {
+    color: #6772A4;
+}
+
+.ul-nav.left li a {
+    vertical-align: middle;
+    line-height: 2rem;
+}
+
+#welcome-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: whitesmoke;
+    height: 100vh;
+
+    background: linear-gradient(
+        45deg,
+        #3D3949,
+        #6772A4,
+        #30496B,
+        #2a4474
+    );
+
+    background-size: 400% 400%;
+    animation: change 4s forwards 1;
+    box-shadow: 0 3px 1px -2px black;
+    z-index: 4;
+}
+
+@keyframes change {
+    0%{
+        background-position: left;
+    }
+    100%{
+        background-position: right;
+    }
+}
+
+#welcome-section h1 {
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+#welcome-section p {
+    font-size: 1.1rem;
+    font-style: oblique;
+}
+
+.bloc-anim {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.curseur {
+    margin-left: 0.3rem;
+    width: 0.07rem;
+    height: 1rem;
+    background-color: white;
+    transform: rotate(11deg);
+    animation: clignotement 0.8s ease-in-out infinite;
+}
+
+@keyframes clignotement {
+    0% {
+        opacity: 0%;
+    }
+    50% {
+        opacity: 100%;
+    }
+    100% {
+        opacity: 0%;
+    }
+}
+
+#a-propos {
+    padding: 2rem 6rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 3px 1px -2px black;
+    min-height: 100vh;
+    height: fit-content;
+    z-index: 3;
+    max-height: 100%;
+}
+
+.a1 {
+    flex: 5;
+}
+
+.a2 {
+    flex: 3;
+    height: fit-content;
+}
+
+h2 {
+    text-align: center;
+}
+
+#a-propos p {
+    margin-top: 2.2rem;
+    padding-right: 3rem;
+    text-align: justify;
+}
+
+.certification {
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 0.5rem;
+    border-radius: 0.8rem;
+}
+
+figure {
+    margin: 0;
+}
+
+figcaption {
+    text-align: center;
+    font-style: oblique;
+}
+
+.projects {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2rem 6rem;
+    min-height: 100vh;
+    height: fit-content;
+    box-shadow: 0 3px 1px -2px black;
+    z-index: 2;
+}
+
+#boxes {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 3rem;
+    margin-top: 4rem;
+}
+
+.box {
+    width: 23rem;
+    height: 27rem;
+    background-color: #151718;
+    border-radius: 0.5rem;
+}
+
+.menu-box {
+    display: flex;
+    justify-content: flex-start;
+    vertical-align: middle;
+}
+
+.cercle {
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 0.5rem;
+    margin: 0 0.2rem;
+    margin-top: 0.9rem;
+}
+
+.cercle.rouge {
+    background-color: #FF5F56;
+    margin-left: 0.9rem;
+    transition: 0.3s ease-in-out;
+}
+
+.cercle.rouge:hover {
+    background-color: #ff5e5682;
+}
+
+.cercle.jaune {
+    background-color: #FFBD2E;
+    transition: 0.3s ease-in-out;
+}
+
+.cercle.jaune:hover {
+    background-color: #ffbd2e84;
+}
+
+.cercle.vert {
+    background-color: #27C93F;
+    transition: 0.3s ease-in-out;
+}
+
+.cercle.vert:hover {
+    background-color: #27c93f81;
+}
+
+.titre-box {
+    font-size: 0.8rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contenu-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 7%;
+}
+
+.img-box {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 0.3rem;
+}
+
+.contenu-box p {
+    text-align: justify;
+    font-size: 0.9rem;
+}
+
+#contact {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 50vh;
+    height: fit-content;
+    padding: 2rem 0rem;
+    width: 100%;
+    z-index: 1;
+    box-shadow: 0 3px 2px -2px black;
+}
+
+#contact h2 {
+    margin: 1rem 0;
+}
+
+#contact p {
+    text-align: center; 
+    font-style: oblique;
+    margin: 0;
+}
+
+.profiles {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 4rem 0;
+    text-align: middle;
+    width: 100%;
+}
+
+.lien-projet {
+    color: linen;
+    text-decoration: none;
+}
+
+#profile-link {
+    margin: 0 3rem;
+    transition: 0.5s ease-in-out;
+}
+
+#profile-link:hover {
+    transform: translateY(-0.5rem);
+}
+
+.logo-contact {
+    width: 4rem;
+    height: auto;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: var(--main-black);
+}
+
+footer p {
+    display: flex;
+    padding: 1rem 0;
+}
+
+@media (max-width:450px) {
+
+    html {
+        font-size: 12px;
+    }
+
+    #navbar {
+        justify-content: center;
+    }
+
+    #welcome-section h1 {
+        margin: 0;
+        font-size: 2.7rem;
+    }
+
+    #a-propos {
+        padding: 5rem 2rem;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        flex-direction: column;
+    }
+
+    #a-propos p {
+        padding-right: 0;
+    }
+
+    .a1 {
+        flex: 0;
+    }
+    
+    .a2 {
+        flex: 0;
+        height: fit-content;
+    }
+
+    #boxes {
+        gap: 3rem;
+        margin-top: 3rem;
+    }
+
+    .projects {
+        padding-bottom: 4rem;
+    }
+
+    .ul-nav.left {
+        padding-left: 0;
+    }
+
+    .ul-nav.left li {
+        margin: 0.5rem 1.2rem;
+    }
+
+    .ul-nav.right {
+        display: none;
+    }
+
+}
